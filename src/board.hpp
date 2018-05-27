@@ -1,6 +1,5 @@
 #ifndef BOARD_H
 #define BOARD_H
-#include guard
 
 void board(char deck[8][8]);
 void reformat_input(char *input, int move[4]);
