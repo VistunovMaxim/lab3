@@ -1,4 +1,3 @@
-#include guard
 #include "board_read.hpp"
 #include <stdio.h>
 #include <stdlib.h>

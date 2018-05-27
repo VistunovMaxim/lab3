@@ -1,4 +1,3 @@
-#include guard
 #include "board_start.hpp"
 
 void board_start(char deck[8][8]) {

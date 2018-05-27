@@ -1,4 +1,3 @@
-#include guard
 #include "board_print_plain.hpp"
 #include <stdio.h>
 
