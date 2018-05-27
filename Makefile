@@ -2,7 +2,7 @@ CFLAGS = -Wall -Werror
 CC = g++ -c $< -o $@ $(CFLAGS)
 .PHONY: all clean
 
-all: bin/chessviz
+all: clean bin build bin/chessviz
 
 bin/chessviz: build/main.o build/board_print_plain.o build/board_read.o build/board_start.o build/board.o
 	g++ $^ -o $@ $(CFLAGS)
@@ -28,5 +28,5 @@ bin:
 	mkdir bin
 
 clean:
-	rm build/*
-	rm bin/*
+	rm -rf build
+	rm -rf bin
