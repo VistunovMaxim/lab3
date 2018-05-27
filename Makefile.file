@@ -1,0 +1,27 @@
+CFLAGS = -Wall -Werror
+OBJ = g++ -c $< -o $@ $(CFLAGS)
+.PHONY: all clean
+
+all: bin/chessviz
+
+bin/chessviz: build/main.o build/board_print_plain.o build/board_read.o build/board_start.o build/board.o
+	g++ $^ -o $@ $(CFLAGS)
+
+build/main.o: src/main.cpp
+	$(OBJ)
+
+build/board_print_plain.o: src/board_print_plain.cpp
+	$(OBJ)
+
+build/board_read.o: src/board_read.cpp
+	$(OBJ)
+
+build/board_start.o: src/board_start.cpp
+	$(OBJ)
+
+build/board.o: src/board.cpp
+	$(OBJ)
+
+clean:
+	rm build/*
+	rm bin/*
